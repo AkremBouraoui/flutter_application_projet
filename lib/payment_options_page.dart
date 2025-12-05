@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 
 class PaymentOptionsPage extends StatelessWidget {
@@ -8,3 +9,5 @@ class PaymentOptionsPage extends StatelessWidget {
     return const Placeholder();
   }
 }
+=======
+>>>>>>> fcc7ddea4d0ef082cfa4011f13d50e6e77f4e554
