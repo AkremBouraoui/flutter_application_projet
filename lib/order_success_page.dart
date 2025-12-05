@@ -50,7 +50,7 @@ class OrderSuccessPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
+      ),
+    );
+  }
 }

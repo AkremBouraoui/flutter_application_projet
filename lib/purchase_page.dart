@@ -9,7 +9,7 @@ class PurchasePage extends StatefulWidget {
 }
 
 class _PurchasePageState extends State<PurchasePage> {
-  // ------- LISTE DES PRODUITS -------
+  
   final List<Map<String, dynamic>> _items = [
     {
       "title": "THE BUCKET HAT",
@@ -49,7 +49,7 @@ class _PurchasePageState extends State<PurchasePage> {
     },
   ];
 
-  // ------- TOTAL PRICE -------
+  
   double get totalPrice {
     double sum = 0;
     for (var item in _items) {
@@ -58,12 +58,12 @@ class _PurchasePageState extends State<PurchasePage> {
     return sum;
   }
 
-  // ------- QTY + -------
+ 
   void _increaseQty(int index) {
     setState(() => _items[index]["qty"]++);
   }
 
-  // ------- QTY - -------
+  
   void _decreaseQty(int index) {
     setState(() {
       if (_items[index]["qty"] > 0) _items[index]["qty"]--;
@@ -80,7 +80,7 @@ class _PurchasePageState extends State<PurchasePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ----------------- HEADER -----------------
+             
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -107,7 +107,7 @@ class _PurchasePageState extends State<PurchasePage> {
 
               const SizedBox(height: 15),
 
-              // ----------- PRODUCT LIST ------------
+          
               Expanded(
                 child: ListView.builder(
                   itemCount: _items.length,
@@ -127,7 +127,7 @@ class _PurchasePageState extends State<PurchasePage> {
 
               const SizedBox(height: 16),
 
-              // -------------- DELIVERY CHARGE --------------
+             
               const Text(
                 "DELIVERY CHARGE :",
                 style: TextStyle(
@@ -148,7 +148,6 @@ class _PurchasePageState extends State<PurchasePage> {
 
               const SizedBox(height: 12),
 
-              // ------------------ TOTAL + CHECKOUT -------------------
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -176,7 +175,7 @@ class _PurchasePageState extends State<PurchasePage> {
                     ],
                   ),
 
-                  // -------------- CHECKOUT BUTTON --------------
+                  
                   GestureDetector(
                     onTap: () {
                       final selected = _items
@@ -221,7 +220,6 @@ class _PurchasePageState extends State<PurchasePage> {
     );
   }
 
-  // ------------------ PRODUCT ITEM WIDGET ------------------
   Widget _buildCartItem({
     required String title,
     required double price,
@@ -239,7 +237,6 @@ class _PurchasePageState extends State<PurchasePage> {
       ),
       child: Row(
         children: [
-          // IMAGE
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
@@ -252,7 +249,6 @@ class _PurchasePageState extends State<PurchasePage> {
 
           const SizedBox(width: 12),
 
-          // TITLE + PRICE
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -278,7 +274,6 @@ class _PurchasePageState extends State<PurchasePage> {
             ),
           ),
 
-          // - / qty / +
           Row(
             children: [
               GestureDetector(

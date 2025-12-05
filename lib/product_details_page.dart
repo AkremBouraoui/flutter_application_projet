@@ -41,7 +41,6 @@ class ProductDetailsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
 
-                  // صورة المنتج داخل Card مع Gradient
                   Center(
                     child: Container(
                       padding: const EdgeInsets.all(20),
@@ -70,7 +69,6 @@ class ProductDetailsPage extends StatelessWidget {
 
                   const SizedBox(height: 25),
 
-                  // عنوان المنتج
                   Text(
                     product.title,
                     style: const TextStyle(
@@ -82,12 +80,12 @@ class ProductDetailsPage extends StatelessWidget {
 
                   const SizedBox(height: 8),
 
-                  // Rating + السعر
+                
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
 
-                      // Rating
+                      
                       Row(
                         children: [
                           const Icon(Icons.star, color: Colors.amber, size: 20),
@@ -108,7 +106,7 @@ class ProductDetailsPage extends StatelessWidget {
                         ],
                       ),
 
-                      // السعر داخل Capsule
+                    
                       Container(
                         padding:
                             const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -130,7 +128,6 @@ class ProductDetailsPage extends StatelessWidget {
 
                   const SizedBox(height: 25),
 
-                  // وصف المنتج
                   const Text(
                     "Description",
                     style: TextStyle(
@@ -154,7 +151,6 @@ class ProductDetailsPage extends StatelessWidget {
 
                   const SizedBox(height: 25),
 
-                  // تفاصيل المنتج
                   const Text(
                     "Product details",
                     style: TextStyle(
@@ -186,7 +182,7 @@ class ProductDetailsPage extends StatelessWidget {
 
                   const SizedBox(height: 25),
 
-                  // تعليمات الغسيل
+                
                   const Text(
                     "Care instructions",
                     style: TextStyle(
@@ -213,7 +209,6 @@ class ProductDetailsPage extends StatelessWidget {
 
                   const SizedBox(height: 28),
 
-                  // معلومات الشحن
                   Container(
                     width: double.infinity,
                     padding: const EdgeInsets.all(14),
@@ -250,7 +245,6 @@ class ProductDetailsPage extends StatelessWidget {
         ],
       ),
 
-      // ================= BUY NOW BUTTON =================
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         decoration: BoxDecoration(
@@ -267,7 +261,6 @@ class ProductDetailsPage extends StatelessWidget {
         child: Row(
           children: [
 
-            // السعر
             Expanded(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -293,7 +286,6 @@ class ProductDetailsPage extends StatelessWidget {
               ),
             ),
 
-            // زر BUY NOW
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -326,7 +318,6 @@ class ProductDetailsPage extends StatelessWidget {
     );
   }
 
-  // ============ Widget للبطاقات الصغيرة ============
   Widget _infoChip(String label, String value) {
     return Expanded(
       child: Container(
