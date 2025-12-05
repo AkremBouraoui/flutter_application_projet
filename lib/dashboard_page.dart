@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'product_details_page.dart';
 import 'product.dart';
-import 'package:flutter_application_ultras/purchase_page.dart';
+import 'purchase_page.dart';
 
-class DashboardPage extends StatelessWidget {
+class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
 
   @override
