@@ -12,6 +12,19 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
+              },
+              child: Image.asset(
+                'assets/images/logo.png',
+                width: 180,
+              ),
+            ),
+            const SizedBox(height: 25),
     
   }
 }
