@@ -25,6 +25,21 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
-    
+            const Text(
+              "ULTRAS\nGREEN ARMY\nSHOP",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: "IrishGrover",
+                fontSize: 36,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                height: 1.1,
+                letterSpacing: 1.0,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
